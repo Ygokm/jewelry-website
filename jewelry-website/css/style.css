@@ -1,0 +1,655 @@
+/* Сброс стилей */
+/* Обновленные стили для карточек продуктов */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Контейнер для изображения */
+.product-image {
+    width: 100%;
+    height: 200px; /* Фиксированная высота для всех фото */
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезаем фото, чтобы заполнить контейнер */
+    object-position: center; /* Центрируем фото */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* Контент карточки */
+.product-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-content h3 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.product-content p {
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1; /* Текст занимает все доступное пространство */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Шапка */
+header {
+    background: #f8f8f8;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+/* Навигация */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: #d4af37;
+    color: white;
+}
+
+/* Основной контент */
+main {
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+/* Герой секция */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #d4af37;
+}
+
+/* Продукты */
+.products {
+    margin: 3rem 0;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.product-card h3 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+/* О нас */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.advantages {
+    list-style-position: inside;
+    margin: 1rem 0 2rem 2rem;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.team-member {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Контакты*/
+.contacts {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contacts h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.contacts h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #d4af37;
+    margin: 15px auto;
+}
+
+/* Контактная информация */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-item {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.contact-item h3 {
+    color: #333;
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.contact-item p {
+    color: #555;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.contact-note {
+    color: #d4af37 !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 0.8rem !important;
+}
+
+/* Секция транспорта */
+.transport-section {
+    margin-bottom: 4rem;
+}
+
+.transport-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+}
+
+.transport-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.transport-item {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.transport-item:hover {
+    background: #f9f9f9;
+    transform: translateY(-5px);
+}
+
+.transport-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    flex-shrink: 0;
+}
+
+.transport-item h3 {
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.transport-item p {
+    color: #555;
+    margin: 0.3rem 0;
+}
+
+.transport-detail {
+    color: #777 !important;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Секция услуг */
+.services-section {
+    margin-bottom: 4rem;
+}
+
+.services-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid #d4af37;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.service-item h3 {
+    color: #d4af37;
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.service-item p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* FAQ секция */
+.faq-section {
+    margin-bottom: 4rem;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.faq-item h3 {
+    color: #333;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.faq-item h3::before {
+    content: '❔';
+    color: #d4af37;
+    font-size: 1.5rem;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Социальные сети */
+.social-section {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.social-section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.social-description {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-link {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    text-align: center;
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.social-link.vk {
+    background: #4c75a3;
+}
+
+.social-link.telegram {
+    background: #0088cc;
+}
+
+.social-link.whatsapp {
+    background: #25d366;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* футер */
+footer {
+    background: linear-gradient(135deg, #333 0%, #222 100%);
+    color: white;
+    padding: 3rem 2rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h4 {
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    color: #ccc;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.footer-section a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #d4af37;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    color: #999;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contacts {
+        padding: 1rem;
+    }
+    
+    .contacts h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-item, .transport-item, .service-item, .faq-item {
+        min-width: 100%;
+        padding: 1.5rem;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .social-link {
+        min-width: 120px;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-link {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Погода */
+.weather-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+#weather {
+    padding: 1rem;
+    background: white;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* Подвал */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-card {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .team {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+    }
+}
