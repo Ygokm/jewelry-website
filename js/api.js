@@ -9,7 +9,7 @@ class WeatherAPIFallback {
     
     async getWeather() {
         try {
-            const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=55.7558&longitude=37.6173&current_weather=true');
+            const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=55.7522&longitude=37.62&hourly=temperature_2m,wind_speed_10m&timezone=Europe%2FMoscow');
             
             if (!response.ok) {
                 throw new Error('Ошибка получения данных');
@@ -64,3 +64,4 @@ document.addEventListener('DOMContentLoaded', () => {
     new WeatherAPIFallback();
 
 });
+
